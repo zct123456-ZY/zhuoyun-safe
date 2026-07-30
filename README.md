@@ -1,4 +1,4 @@
-# 云密安 · 商用密码检测有限公司 官网（纯静态站点）
+# 卓云信息 · 商用密码检测有限公司 官网（纯静态站点）
 
 一个**零依赖、纯静态**的企业官网，用于展示商用密码检测（密评 / 密改 / 密码咨询 / 跨境数据合规 / AI 安全测评）机构的服务能力。
 所有页面、样式、脚本、图标均为本地文件，**不依赖任何外部 CDN**，可直接用 VS Code 编辑、用 GitHub Pages 免费上线。
@@ -74,7 +74,7 @@ website/
 - 浏览器打开该地址即可访问。如为"项目页"，注意地址带仓库名，例如 `https://用户名.github.io/website/`。
 
 **第 5 步｜（可选）绑定自己的域名**
-- 在 `Pages` 设置里的 `Custom domain` 填入你的域名（如 `www.yuncrypt.com`），按提示去域名解析商添加 `CNAME` / `A` 记录。
+- 在 `Pages` 设置里的 `Custom domain` 填入你的域名（如 `zhuoyunkeji.com`），按提示去域名解析商添加 `CNAME` / `A` 记录。
 - GitHub 会自动签发 HTTPS 证书，约数十分钟生效。
 
 **第 6 步｜后续更新**
@@ -96,8 +96,8 @@ GitHub Pages 只能托管静态文件，**表单本身不会把数据发到你�
 
 ## 五、改成你自己的内容（5 处必改）
 
-1. **公司名 / 品牌**：全局搜索 `云密安` 与 `YUNCRYPT` 替换为实际名称；替换 `assets/img/logo.svg` 与 `favicon.svg`（用任意 SVG 编辑器或让 AI 生成）。
-2. **联系方式**：编辑各页 `<footer>` 与 `contact.html` 中的地址、电话 `400-XXX-XXXX`、邮箱 `contact@yuncrypt.example`。
+1. **公司名 / 品牌**：全局搜索 `卓云信息` 与 `ZHUOYUN` 替换为实际名称；替换 `assets/img/logo.svg` 与 `favicon.svg`（用任意 SVG 编辑器或让 AI 生成）。
+2. **联系方式**：编辑各页 `<footer>` 与 `contact.html` 中的地址、电话 `400-XXX-XXXX`、邮箱 `contact@zhuoyunkeji.com`。
 3. **配色**：修改 `assets/css/style.css` 顶部 `:root` 的 CSS 变量（`--navy` / `--blue` / `--sky` 等）即可整体换色，无需动 HTML。
 4. **文案与案例**：直接在对应 `.html` 中改中文；案例数字为脱敏示例，请替换为真实可公开数据。
 5. **新增页面**：复制任一 `.html`，改 `<title>` 与内容，并在各页 `<nav class="nav-links">` 中补一条 `<a>` 链接。
@@ -114,4 +114,4 @@ GitHub Pages 只能托管静态文件，**表单本身不会把数据发到你�
 
 ---
 
-© 云密安商用密码检测有限公司（示例网站，可自由替换为实际信息）
+© 云南省昆明市卓云信息科技有限公司
