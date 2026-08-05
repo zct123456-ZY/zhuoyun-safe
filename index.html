@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>卓云安全 · 商用密码检测有限公司 — 商用密码应用安全性评估 / 密码改造 / 跨境数据合规</title>
-<meta name="description" content="卓云安全立足云南、面向南亚东南亚的商用密码检测机构，提供商用密码应用安全性评估（密评）、密码应用改造（密改）、密码咨询规划、跨境数据密码合规与AI安全测评服务。">
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>云南卓云信息安全科技有限公司 | 商用密码应用安全性评估（密评）</title>
+<meta name="description" content="云南卓云信息安全科技有限公司是立足云南的商用密码检测与信息安全服务机构，提供商用密码应用安全性评估（密评）、密码应用方案设计与咨询、信息系统等保测评、商用密码产品检测等专业服务。">
+<link rel="icon" href="assets/img/favicon.svg">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-<!-- 顶部导航 -->
-<header class="header">
-  <div class="container nav">
-    <a href="index.html" class="brand">
-      <img src="assets/img/logo.svg" alt="卓云安全" class="logo">
-      <span>卓云安全<small>商用密码检测 · ZHUOYUN</small></span>
-    </a>
+<!-- 导航 -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="卓云安全"><span>卓云安全<small>ZHUOYUN SECURITY</small></span></a>
     <nav class="nav-links">
       <a href="index.html">首页</a>
       <a href="about.html">关于我们</a>
-      <a href="services.html">服务业务</a>
-      <a href="solutions.html">解决方案</a>
-      <a href="cases.html">资质案例</a>
+      <a href="services.html">服务项目</a>
+      <a href="qualifications.html">资质荣誉</a>
+      <a href="cases.html">案例客户</a>
+            <a href="disclosure.html">信息公示</a>
       <a href="contact.html">联系我们</a>
     </nav>
     <div class="nav-cta">
-      <a href="contact.html" class="btn btn-outline">预约咨询</a>
+      <form class="nav-search" action="search.html" method="get" role="search" onsubmit="var v=this.querySelector('input[name=q]').value.trim(); if(!v) return false; location.href='search.html?q='+encodeURIComponent(v); return false;">
+        <svg class="ns-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+        <input type="search" name="q" placeholder="搜索…" aria-label="站内搜索" autocomplete="off">
+        <button type="submit" class="ns-btn" aria-label="搜索"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></button>
+      </form>
+      <a class="btn btn-outline" href="contact.html">业务咨询</a><a class="ns-icon-m" href="search.html" aria-label="搜索"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></a>
       <button class="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -34,239 +36,206 @@
 
 <!-- Hero -->
 <section class="hero">
-  <div class="container hero-grid">
+  <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">商用密码应用安全性评估 · 专业机构</span>
-      <h1>让每一份数据<br>都拥有<span class="hl">自主可控</span>的安全底座</h1>
-      <p class="lead">卓云安全立足云南、面向南亚东南亚的商用密码检测机构，提供密评、密改、密码咨询、跨境数据合规与 AI 安全测评一体化服务，助力关键信息基础设施与重要信息系统合规、可信、可对抗。</p>
-      <div class="hero-actions">
-        <a href="services.html" class="btn btn-primary">查看服务能力 <span class="arrow">→</span></a>
-        <a href="contact.html" class="btn btn-ghost">获取合规诊断</a>
+      <h1><span class="accent-bar"></span>合规 · 安全 · 可信<br><span class="hl">一站式商用密码应用安全性评估服务</span></h1>
+      <p class="lead">云南卓云信息安全科技有限公司立足云南，是专业的商用密码检测与信息安全服务机构，为关键信息基础设施运营者及重要信息系统提供商用密码应用安全性评估（密评）、密码应用方案设计、等保测评与密码产品检测等专业解决方案。</p>
+      <div class="hero-tags">
+        <span>商用密码应用安全性评估</span><span>密码应用方案设计</span><span>信息系统等保测评</span><span>CNAS 检测能力</span><span>关键信息基础设施防护</span>
       </div>
-      <div class="hero-badges">
-        <div class="b"><b>GB/T 39786</b><span>密评国标合规</span></div>
-        <div class="b"><b>三级以上</b><span>等保系统全覆盖</span></div>
-        <div class="b"><b>两亚辐射</b><span>跨境数据合规</span></div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="services.html">查看服务项目</a>
+        <a class="btn btn-outline" href="about.html">了解我们 →</a>
       </div>
     </div>
-    <div class="hero-art">
-      <svg viewBox="0 0 420 360" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="sg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#3DA5E0"/><stop offset="1" stop-color="#36C5D0"/>
-          </linearGradient>
-        </defs>
-        <circle cx="210" cy="180" r="150" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
-        <circle cx="210" cy="180" r="110" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="1"/>
-        <g opacity=".9">
-          <circle cx="80" cy="90" r="6" fill="#36C5D0"/><circle cx="340" cy="120" r="6" fill="#3DA5E0"/>
-          <circle cx="60" cy="250" r="5" fill="#3DA5E0"/><circle cx="350" cy="260" r="6" fill="#36C5D0"/>
-          <circle cx="210" cy="40" r="5" fill="#fff"/><circle cx="120" cy="310" r="5" fill="#fff"/>
-        </g>
-        <path d="M210 50 L330 100 V190 C330 258 278 305 210 322 C142 305 90 258 90 190 V100 Z" fill="url(#sg)" opacity=".95"/>
-        <circle cx="210" cy="165" r="34" fill="#fff"/>
-        <rect x="203" y="178" width="14" height="46" rx="6" fill="#0B2545"/>
-        <rect x="203" y="205" width="26" height="13" rx="5" fill="#0B2545"/>
-        <path d="M150 250 L250 250" stroke="rgba(255,255,255,.35)" stroke-width="2" stroke-dasharray="4 5"/>
-        <text x="210" y="345" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" font-family="Microsoft YaHei">商用密码 · 可信底座</text>
-      </svg>
-    </div>
+    <aside class="hero-card">
+      <h3>核心数据</h3>
+      <div class="row"><span>成立时间</span><b>2014 年</b></div>
+      <div class="row"><span>密评技术团队</span><b>30+ 名</b></div>
+      <div class="row"><span>服务重要信息系统</span><b>200+ 套</b></div>
+      <div class="row"><span>覆盖行业</span><b>政务 / 金融 / 医疗</b></div>
+      <div class="row"><span>出具密评报告</span><b>500+ 份</b></div>
+    </aside>
   </div>
 </section>
 
-<!-- 信任条 -->
-<div class="trustbar">
-  <div class="container">
-    <span>《密码法》</span><span>《商用密码管理条例》</span><span>《密评管理办法》</span>
-    <span>《关基密码使用管理规定》</span><span>GB/T 39786 / 43206</span>
-  </div>
-</div>
-
-<!-- 核心业务 -->
+<!-- 核心业务（可点击查看详情） -->
 <section class="section">
-  <div class="container">
-    <div class="center reveal">
-      <span class="eyebrow">CORE SERVICES</span>
-      <h2 class="section-title">六大核心业务能力</h2>
-      <p class="section-sub">从合规测评到密码改造，从顶层规划到持续监测，覆盖商用密码应用全生命周期，并以云南独有的跨境数据合规能力形成差异化优势。</p>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">SERVICES</span>
+      <h2>六大业务板块</h2>
+      <p>覆盖密评、密码方案、等保测评、密码产品检测、合规咨询与行业专项。点击任意板块可查看服务范围与适用标准。</p>
     </div>
-    <div class="grid grid-3" style="margin-top:42px">
-      <div class="card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V6z"/><circle cx="12" cy="11" r="2.4"/><path d="M12 13v4"/></svg></div>
-        <h3>商用密码应用安全性评估（密评）</h3>
-        <p>依据 GB/T 39786 / 43206，对等保三级及以上、重要信息系统与关键信息基础设施开展合规测评、风险判定与整改建议。</p>
-        <a href="services.html" class="link">了解详情 →</a>
+    <div class="grid grid-3">
+      <div class="svc reveal clickable" role="button" tabindex="0" data-service="A">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div class="code">A 类</div><h3>商用密码应用安全性评估</h3>
+        <ul><li>密码应用合规性 / 正确性 / 有效性评估</li><li>密评方案编制与现场测评</li><li>密评报告出具（依据 GB/T 39786）</li></ul>
+        <span class="more-link">查看详情 <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </div>
-      <div class="card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1.6"/></svg></div>
-        <h3>密码应用改造（密改）</h3>
-        <p>提供密码服务平台、SSL VPN、签名验签、加密存储等一体化改造方案，打通"测评—整改—复测"闭环，单包价值远高于测评。</p>
-        <a href="services.html" class="link">了解详情 →</a>
+      <div class="svc reveal clickable" role="button" tabindex="0" data-service="B">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 12l8-4"/></svg></div>
+        <div class="code">B 类</div><h3>密码应用方案设计与咨询</h3>
+        <ul><li>密码应用方案（建设 / 改造）编制</li><li>合规性差距分析与整改设计</li><li>密评前预评估与密钥管理设计</li></ul>
+        <span class="more-link">查看详情 <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </div>
-      <div class="card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 19V5l8 4 8-4v14"/><path d="M12 9v10"/></svg></div>
-        <h3>密码咨询与顶层规划</h3>
-        <p>面向政务、金融、医疗等行业提供密码应用规划、方案设计、合规差距分析与制度建设，让信息化建设"同步规划、同步建设"。</p>
-        <a href="services.html" class="link">了解详情 →</a>
+      <div class="svc reveal clickable" role="button" tabindex="0" data-service="C">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 12h4l3-8 4 16 3-8h4"/></svg></div>
+        <div class="code">C 类</div><h3>信息系统等保测评</h3>
+        <ul><li>等保定级备案咨询与协助</li><li>等级保护测评与整改支撑</li><li>关基安全保护咨询</li></ul>
+        <span class="more-link">查看详情 <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </div>
-      <div class="card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div>
-        <h3>跨境数据密码合规（云南特色）</h3>
-        <p>依托昆明国际数据交易所与面向南亚东南亚辐射中心区位，提供跨境数据可信空间的密码合规评估与数据流通安全方案。</p>
-        <a href="services.html" class="link">了解详情 →</a>
+      <div class="svc reveal clickable" role="button" tabindex="0" data-service="D">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+        <div class="code">D 类</div><h3>商用密码产品（模组）检测</h3>
+        <ul><li>密码产品功能与安全性检测</li><li>软件密码模块合规性检测</li><li>密码应用系统安全性检测</li></ul>
+        <span class="more-link">查看详情 <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </div>
-      <div class="card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="5" y="7" width="14" height="12" rx="2"/><path d="M9 7V4h6v3M9 12h6M9 15h4"/></svg></div>
-        <h3>AI 安全测评</h3>
-        <p>面向大模型与智能体，开展内容安全、模型可信、对抗攻击与数据泄露风险评估，满足新兴 AI 业态的安全合规要求。</p>
-        <a href="services.html" class="link">了解详情 →</a>
+      <div class="svc reveal clickable" role="button" tabindex="0" data-service="E">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+        <div class="code">E 类</div><h3>密码安全合规咨询与培训</h3>
+        <ul><li>密码安全合规体系建设咨询</li><li>密评 / 等保政策解读与迎评辅导</li><li>密码技术人员专项培训</li></ul>
+        <span class="more-link">查看详情 <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </div>
-      <div class="card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M21 4v4h-4M3 20v-4h4"/></svg></div>
-        <h3>持续合规监测（订阅式）</h3>
-        <p>以密评监管平台提供常态化、动态化合规监测与年度复核，把"一次性测评"升级为"持续可对抗"的安全运营。</p>
-        <a href="services.html" class="link">了解详情 →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 为什么选我们 + 云南区位 -->
-<section class="section bg-soft">
-  <div class="container grid grid-2" style="align-items:center">
-    <div class="reveal">
-      <span class="eyebrow">WHY ZHUOYUN</span>
-      <h2 class="section-title">为什么选择<span class="accent">卓云信息</span></h2>
-      <p class="section-sub">我们不是只会"打分的测评机构"，而是能交付合规、能落地改造、能陪跑运营的密码安全伙伴。</p>
-      <ul class="feature-list" style="margin-top:22px">
-        <li><span class="ck">✓</span><div><b>持证专业团队</b><p>核心人员持有商用密码评估从业资质，覆盖测评、改造、咨询全链条能力。</p></div></li>
-        <li><span class="ck">✓</span><div><b>测评—改造一体化</b><p>不只指出问题，更提供可落地的密码应用改造方案与复测闭环。</p></div></li>
-        <li><span class="ck">✓</span><div><b>云南本地 + 两亚辐射</b><p>深耕地州与口岸，独占跨境数据合规场景，外地机构难以本地落地。</p></div></li>
-        <li><span class="ck">✓</span><div><b>持续合规运营</b><p>订阅式监测平台让密码合规从"过关"变为"常态"，降低被监管抽查风险。</p></div></li>
-      </ul>
-    </div>
-    <div class="reveal">
-      <div class="card" style="background:linear-gradient(135deg,#0B2545,#15527f);color:#fff;border:none">
-        <h3 style="color:#fff">面向南亚东南亚的区位优势</h3>
-        <p style="color:rgba(255,255,255,.82)">云南与缅甸、老挝、越南接壤，是面向南亚东南亚辐射中心。我们依托昆明国际通信出入口局、昆明国际数据交易所、磨憨—磨丁合作区等独有基础设施，构建跨境数据可信空间的密码合规能力。</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px">
-          <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:14px"><b style="color:var(--sky);font-size:20px">8</b><br><span style="font-size:12.5px;color:rgba(255,255,255,.78)">条跨境链路（中老中缅中越）</span></div>
-          <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:14px"><b style="color:var(--sky);font-size:20px">226</b><br><span style="font-size:12.5px;color:rgba(255,255,255,.78)">家数商聚集（数据交易所）</span></div>
-          <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:14px"><b style="color:var(--sky);font-size:20px">4</b><br><span style="font-size:12.5px;color:rgba(255,255,255,.78)">大跨境场景（医/教/物流/人才）</span></div>
-          <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:14px"><b style="color:var(--sky);font-size:20px">1</b><br><span style="font-size:12.5px;color:rgba(255,255,255,.78)">个国际通信出入口局（昆明）</span></div>
-        </div>
+      <div class="svc reveal clickable" role="button" tabindex="0" data-service="F">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="code">F 类</div><h3>行业专项密评</h3>
+        <ul><li>政务云 / 政务信息系统密评</li><li>金融核心系统与支付密评</li><li>医疗 HIS / 影像云 / 工控密评</li></ul>
+        <span class="more-link">查看详情 <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 数据资质 -->
-<section class="section bg-navy">
-  <div class="container">
-    <div class="center reveal" style="margin-bottom:40px">
-      <span class="eyebrow" style="color:var(--sky)">BY THE NUMBERS</span>
-      <h2 class="section-title" style="color:#fff">用实力说话</h2>
+<!-- 资质亮点 -->
+<section class="section soft">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">STRENGTHS</span>
+      <h2>为什么选择卓云</h2>
+      <p>资质权威、团队专业、标准严谨、服务贴身——以独立第三方立场守护每一份密评数据的客观可信。</p>
     </div>
     <div class="stats reveal">
-      <div class="s"><b>10+</b><span>年网络安全从业积淀</span></div>
-      <div class="s"><b>100+</b><span>信息系统测评与改造经验</span></div>
-      <div class="s"><b>6</b><span>大核心业务能力覆盖</span></div>
-      <div class="s"><b>3</b><span>类达标资质规划中</span></div>
+      <div class="stat"><div class="num">密评</div><div class="lbl">商用密码应用安全性评估<br>机构资质（示例）</div></div>
+      <div class="stat"><div class="num">CNAS</div><div class="lbl">检测实验室<br>能力认可</div></div>
+      <div class="stat"><div class="num">30+</div><div class="lbl">密评技术团队<br>（持证测评师）</div></div>
+      <div class="stat"><div class="num">200+</div><div class="lbl">服务重要<br>信息系统（套）</div></div>
     </div>
+
+    <div class="impartiality reveal">
+      <div class="impartiality-head">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div>
+          <h3>公正性声明</h3>
+          <p>独立、公正、科学、准确——我们以第三方立场守护每一份密评数据的真实可信。</p>
+        </div>
+      </div>
+      <div class="impartiality-list" id="impartialityList"></div>
+      <p class="impartiality-note">点击查看完整声明原文；声明内容同步公开于「信息公示」栏目，接受社会监督。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 实验室与设备实景 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">FACILITIES</span>
+      <h2>实验室与设备实景</h2>
+      <p>专业的密码测评环境、安全检测工具与标准化实验室，保障每一份数据的准确可靠。</p>
+    </div>
+    <div class="home-gallery reveal">
+      <img src="assets/img/legacy/home1.png" alt="卓云安全实验室实景 1" loading="lazy" onerror="this.style.display='none'">
+      <img src="assets/img/legacy/home2.png" alt="卓云安全实验室实景 2" loading="lazy" onerror="this.style.display='none'">
+      <img src="assets/img/legacy/home3.png" alt="卓云安全实验室实景 3" loading="lazy" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<!-- 公司公告 / 新闻动态（可视化时间线） -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">NEWSROOM</span>
+      <h2>公司公告 · 新闻动态</h2>
+      <p>了解卓云最新资质进展、服务动态与行业资讯，点击任意条目查看详情。</p>
+    </div>
+    <div class="announce-timeline reveal" id="announceList"></div>
+    <div class="ann-more"><a class="btn btn-outline" href="news.html">查看全部公告 →</a></div>
   </div>
 </section>
 
 <!-- 服务流程 -->
-<section class="section">
-  <div class="container grid grid-2" style="align-items:start">
-    <div class="reveal">
-      <span class="eyebrow">OUR PROCESS</span>
-      <h2 class="section-title">标准化密评服务流程</h2>
-      <p class="section-sub">遵循"三同步一评估"要求，密评不是终点，而是合规建设的起点。</p>
+<section class="section soft">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">PROCESS</span>
+      <h2>标准服务流程</h2>
+      <p>从需求沟通到报告交付，每一步规范透明。</p>
     </div>
-    <div class="reveal">
-      <div class="steps">
-        <div class="step"><div class="num"></div><div><h4>01　现状调研与方案评估</h4><p>梳理信息系统资产、明确密评对象，编制密码应用方案并接受方案评估。</p></div></div>
-        <div class="step"><div class="num"></div><div><h4>02　系统测评与风险判定</h4><p>按物理/网络/设备/应用/数据/密钥/管理七大层面开展测评，量化打分与风险判定。</p></div></div>
-        <div class="step"><div class="num"></div><div><h4>03　差距分析与密改设计</h4><p>输出差距报告，设计密码应用改造方案，对接密码产品与服务平台落地。</p></div></div>
-        <div class="step"><div class="num"></div><div><h4>04　复测通过 + 持续运营</h4><p>改造后复测出具合规结论，订阅式监测平台保障常态化合规。</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 新闻动态 -->
-<section class="section bg-soft">
-  <div class="container">
-    <div class="center reveal">
-      <span class="eyebrow">NEWS & INSIGHTS</span>
-      <h2 class="section-title">政策动态与行业洞察</h2>
-      <p class="section-sub">紧跟密评法规与标准演进，第一时间解读对您合规工作的影响。</p>
-    </div>
-    <div class="news-grid" style="margin-top:40px">
-      <div class="news reveal">
-        <div class="thumb"><span class="tag">政策解读</span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></div>
-        <div class="body"><span class="date">2026-03</span><h4>《密评 FAQ（第四版）》发布，新增云/工控/医疗场景</h4><p>全面对接 GB/T 43206-2023，新增"整体测评类"，云、工控、医疗、自建 CA 等复杂场景判定更清晰。</p></div>
-      </div>
-      <div class="news reveal">
-        <div class="thumb"><span class="tag">法规落地</span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V6z"/></svg></div>
-        <div class="body"><span class="date">2025-08</span><h4>《关基密码使用管理规定》正式施行</h4><p>关键信息基础设施运营者密码使用有了专门规章，密评从"倡导"走向"法定义务"。</p></div>
-      </div>
-      <div class="news reveal">
-        <div class="thumb"><span class="tag">行业趋势</span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18"/></svg></div>
-        <div class="body"><span class="date">2026-07</span><h4>十五五数字云南：常态化密评 + AI 安全治理</h4><p>云南"五个高"路线图明确常态化商用密码评估与跨境数据合规，区域密码市场进入快车道。</p></div>
-      </div>
+    <div class="flow reveal">
+      <div class="step"><div class="n"></div><h4>需求沟通</h4><p>了解系统现状与合规要求，明确密评范围与周期。</p></div>
+      <div class="step"><div class="n"></div><h4>方案设计</h4><p>编制密码应用方案与密评方案，开展差距分析。</p></div>
+      <div class="step"><div class="n"></div><h4>现场测评</h4><p>持证测评师依据标准开展技术测评与验证。</p></div>
+      <div class="step"><div class="n"></div><h4>报告交付</h4><p>出具客观、合规、可追溯的密评 / 等保报告。</p></div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="section">
-  <div class="container">
+  <div class="wrap">
     <div class="cta reveal">
-      <h2>不确定系统是否需要密评？先做一次合规诊断</h2>
-      <p>留下您的信息，密评顾问将基于系统等级、行业属性与跨境场景，给出可落地的合规路径建议。</p>
-      <a href="contact.html" class="btn btn-primary" style="background:#fff;color:var(--navy)">立即预约免费诊断 <span class="arrow">→</span></a>
+      <h2>需要专业的商用密码应用安全性评估？</h2>
+      <p>无论是密评、密码应用方案设计还是等保测评，卓云为您提供一站式密码安全解决方案。</p>
+      <a class="btn btn-primary" href="contact.html">立即咨询 →</a>
     </div>
   </div>
 </section>
 
 <!-- 页脚 -->
 <footer class="footer">
-  <div class="container footer-grid">
+  <div class="wrap footer-grid">
     <div>
-      <div class="brand"><img src="assets/img/logo.svg" alt="卓云安全" class="logo" style="filter:brightness(0) invert(1)"><span>卓云安全<small>商用密码检测 · ZHUOYUN</small></span></div>
-      <p class="desc">立足云南、面向南亚东南亚的商用密码检测机构，提供密评、密改、密码咨询、跨境数据合规与 AI 安全测评一体化服务。</p>
+      <div class="brand"><img src="assets/img/logo.svg" alt="卓云安全" style="width:40px;height:40px"><span>卓云安全<small>ZHUOYUN SECURITY</small></span></div>
+      <p class="desc">云南卓云信息安全科技有限公司——立足云南的商用密码检测与信息安全服务机构，以科学、公正、准确、及时为原则，守护信息系统密码安全。</p>
     </div>
-    <div>
-      <h5>服务业务</h5>
-      <a href="services.html">商用密码评估（密评）</a>
-      <a href="services.html">密码应用改造（密改）</a>
-      <a href="services.html">跨境数据密码合规</a>
-      <a href="services.html">AI 安全测评</a>
+    <div><h5>快速链接</h5><ul>
+      <li><a href="index.html">首页</a></li><li><a href="about.html">关于我们</a></li>
+      <li><a href="services.html">服务项目</a></li><li><a href="qualifications.html">资质荣誉</a></li>
+    </ul></div>
+    <div><h5>业务领域</h5><ul>
+      <li><a href="services.html#crypto-eval">商用密码应用安全性评估</a></li><li><a href="services.html#crypto-design">密码应用方案设计与咨询</a></li>
+      <li><a href="services.html#dengbao">信息系统等保测评</a></li><li><a href="services.html#product-test">商用密码产品（模组）检测</a></li>
+    </ul></div>
+    <div><h5>联系我们</h5>
+      <div class="contact-line"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>昆明市五华区云时代广场2幢10层1009室</span></div>
+      <div class="contact-line"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg><span>0871-00000000</span></div>
+      <div class="contact-line"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>contact@zhuoyunkeji.com</span></div>
     </div>
-    <div>
-      <h5>关于 / 资源</h5>
-      <a href="about.html">关于我们</a>
-      <a href="cases.html">资质与案例</a>
-      <a href="solutions.html">行业解决方案</a>
-      <a href="contact.html">联系我们</a>
-    </div>
-    <div>
-      <h5>联系我们</h5>
-      <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>云南省昆明市（面向南亚东南亚辐射中心）</span></div>
-      <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>400-XXX-XXXX（商务咨询）</span></div>
-      <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>contact@zhuoyunkeji.com</span></div>
-    </div>
-    <div class="footer-qr"><h5>关注我们</h5><div class="qr-box"><img src="assets/img/qr-placeholder.svg" alt="扫码关注公众号"></div><p>扫码关注<br>卓云安全公众号</p></div>
+    <div class="footer-qr"><h5>关注我们</h5><div class="qr-duo"><div class="qr-single"><img src="assets/img/wechat-qr.png" alt="微信公众号"><span>微信公众号</span></div><div class="qr-single"><img src="assets/img/qq-group-qr.png" alt="技术交流QQ群"><span>技术交流QQ群</span></div></div></div>
   </div>
-  <div class="container footer-bottom">
-    <span>© <span data-year>2026</span> 云南卓云信息安全科技有限公司. 保留所有权利.</span>
-    <span>合规依据：密码法 · 商用密码管理条例 · GB/T 39786 / 43206</span>
+  <div class="wrap footer-bottom">
+    <p>© 2014–2026 云南卓云信息安全科技有限公司 版权所有　<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">滇ICP备00000000号-1</a></p>
+    <p>本站部分图片及视觉素材由 AI 技术辅助生成，部分来源于网络，版权归原作者所有；如有侵权，请联系管理员删除。</p>
   </div>
 </footer>
 
-<div class="totop" aria-label="返回顶部"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
-<script src="assets/js/main.js"></script>
+<div class="totop" aria-label="返回顶部"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
+
+<!-- 弹窗容器 -->
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head">
+      <span class="m-tag" id="modalTag"></span>
+      <h3 id="modalTitle"></h3>
+      <button class="modal-close" id="modalClose" aria-label="关闭"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>

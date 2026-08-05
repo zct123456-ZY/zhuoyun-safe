@@ -1,117 +1,98 @@
-# 卓云安全 · 商用密码检测有限公司 官网（纯静态站点）
+# 卓云安全官网（重建版）
 
-一个**零依赖、纯静态**的企业官网，用于展示商用密码检测（密评 / 密改 / 密码咨询 / 跨境数据合规 / AI 安全测评）机构的服务能力。
-所有页面、样式、脚本、图标均为本地文件，**不依赖任何外部 CDN**，可直接用 VS Code 编辑、用 GitHub Pages 免费上线。
+纯静态、响应式企业官网，**零依赖、无框架、无外部 CDN**，可直接部署到现有 `zhuoyunkeji.com` 服务器，替换旧的 Vue SPA 站点。
 
----
-
-## 一、目录结构（整套代码文件）
-
+## 目录结构
 ```
-website/
-├── index.html              首页（Hero / 核心业务 / 区位优势 / 数据 / 流程 / 新闻 / CTA）
-├── about.html              关于我们（使命愿景 / 发展历程 / 团队）
-├── services.html           服务业务（6 大能力 + 标签页筛选）
-├── solutions.html          行业解决方案（政务 / 金融 / 医疗 / 能源 / 工控 / 跨境）
-├── cases.html              资质与案例（脱敏示例 + 资质体系）
-├── contact.html            联系我们（带前端校验的表单，可对接 Formspree 收件）
+zhuoyun-website/
+├── index.html          首页
+├── about.html          关于我们
+├── services.html       服务项目（A–F 六类）
+├── qualifications.html 资质荣誉
+├── cases.html          案例客户
+├── contact.html        联系我们（含咨询表单）
 ├── assets/
-│   ├── css/style.css       全局样式（简洁大气商务蓝视觉系统）
-│   ├── js/main.js          交互脚本（导航 / 滚动动画 / 表单 / 返回顶部）
+│   ├── css/style.css   设计系统（蓝+青绿科技风）
+│   ├── js/main.js      导航/滚动动画/表单校验
 │   └── img/
-│       ├── logo.svg        品牌 logo
-│       └── favicon.svg     站点图标
-├── .nojekyll               告诉 GitHub Pages 不要走 Jekyll 处理（保证所有文件原样发布）
-└── README.md               本说明文件
+│       ├── logo.svg          原创品牌 logo（盾+锁/密钥+ZH）
+│       ├── favicon.svg       浏览器标签图标
+│       └── qr-placeholder.svg 公众号二维码占位
+└── README.md
 ```
 
-> 所有页面间使用**相对路径**（如 `assets/css/style.css`、`services.html`），因此整个 `website/` 文件夹可整体拷贝、打包、部署，无需改代码 —— 也正是"格式可适应上传"的关键。
+## 本地预览
+```bash
+python -m http.server 8080 --directory zhuoyun-website
+# 浏览器访问 http://localhost:8080
+```
 
----
+## 部署到 zhuoyunkeji.com（现有为 nginx + Vue SPA）
+现有站点由 nginx 托管 Vue 打包产物。新站为纯静态多页，替换方式如下：
 
-## 二、用 VS Code 打开并修改（本地编辑）
+### 方式一：整站替换（推荐）
+1. 备份服务器旧目录（如 `/usr/share/nginx/html` 或站点 root）
+2. 将本目录**全部文件**上传到站点 web root（建议新建 `/var/www/zhuoyun`）
+3. 修改 nginx 站点配置，将 `root` 指向新目录
+4. 校验并重载：`nginx -t && nginx -s reload`
 
-1. 安装 [VS Code](https://code.visualstudio.com/)（免费）。
-2. 打开 VS Code → `文件 / 打开文件夹` → 选择本目录 `website/`。
-3. 左侧文件树点击任意 `.html` 即可编辑文字；`assets/css/style.css` 改样式。
-4. 想要"边改边看"：安装扩展 **Live Server** → 右键 `index.html` → `Open with Live Server`，浏览器自动刷新预览。
-5. 中文排版已用系统字体（微软雅黑 / PingFang），无需额外装字体。
+nginx 配置片段：
+```nginx
+server {
+    listen 80;
+    server_name www.zhuoyunkeji.com zhuoyunkeji.com;
+    root /var/www/zhuoyun;        # 指向新站目录
+    index index.html;
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+    # 建议启用 HTTPS（腾讯云/Let's Encrypt 免费证书）
+}
+```
 
----
+### 方式二：子目录灰度验证
+上传到 `/var/www/zhuoyun-new`，先访问 `www.zhuoyunkeji.com/new/` 验证，再切换 root。
 
-## 三、上传到 GitHub Pages（完整 6 步）
+## 上线前需替换的占位
+| 占位 | 处理 |
+|---|---|
+| 页脚「滇ICP备（备案号待填）」 | 填入 `zhuoyunkeji.com` 真实备案号（该域名已备案，查号填入） |
+| `assets/img/qr-placeholder.svg` | 替换为真实公众号二维码图片 |
+| 电话 `0871-00000000` | 原为传真号，请确认对外联系电话 |
+| 邮箱 `contact@zhuoyunkeji.com` | 真实邮箱，无需改 |
 
-> 前提：注册一个 [GitHub](https://github.com) 账号（免费）。
+## 技术说明
+- 纯 HTML + CSS + JS，无构建步骤，离线可开
+- 自包含样式与脚本，**不依赖任何外部 CDN**（规避旧站 bootcdn 抖动风险）
+- 相对路径，整目录拷贝即部署
+- 响应式，移动端含汉堡菜单；URL 为干净的多页（`/about.html`），利于 SEO 与分享
 
-**第 1 步｜在 GitHub 新建仓库**
-- 右上角 `+` → `New repository`。
-- 仓库名建议用 `<你的用户名>.github.io`（这是"用户页"，访问地址就是 `https://<用户名>.github.io`）；
-  也可以用任意名字（这是"项目页"，地址为 `https://<用户名>.github.io/<仓库名>/`）。
-- 选 **Public**（私有仓库 Pages 需付费），其余默认，点 `Create repository`。
+## 极简内容后台（招聘 / 公司动态自助维护）
+> 目标：非技术人员也能发招聘、发动态，无需改代码；前台仍是纯静态、快稳便。
 
-**第 2 步｜把 website/ 内的文件放进去**
-两种方式任选其一：
+### 原理
+- 招聘（JOBS）、动态（NEWS）已从 `main.js` 抽成独立文件 `assets/data/content.json`。
+- 前端加载时优先 `fetch('assets/data/content.json')`，成功则用远程数据渲染；失败自动回退 `main.js` 内置静态快照（页面照常可用）。
+- 后台 `admin/` 是一个**单文件 PHP 极简后台**，登录后填表即可增删改，保存即写回 `content.json`，前台刷新生效。
 
-- **方式 A（最简单，无需 Git 命令）**：进入新建的仓库 → `Add file` → `Upload files` → 把 `website/` 目录下**所有文件和文件夹**拖进去（含隐藏的 `.nojekyll`）→ 写提交说明 `init site` → `Commit changes`。
-- **方式 B（VS Code + Git）**：在 VS Code 终端执行
-  ```bash
-  cd website
-  git init
-  git add .
-  git commit -m "init site"
-  git branch -M main
-  git remote add origin https://github.com/<你的用户名>/<仓库名>.git
-  git push -u origin main
-  ```
+### 部署前提
+- 服务器需支持 **PHP**（阿里云 LNMP 通常自带；若只有 Node，请告知改 Node 版）。
+- `assets/data/` 目录需**可写**（`chmod 755` 或保证 PHP 进程用户有写权限）。
+- `admin/` 目录**不要**上传到公网临时预览（如 CloudStudio 静态托管会把 `.php` 当静态文件下载，暴露密码）；仅部署到自有服务器 `zhuoyunkeji.com`。
 
-**第 3 步｜开启 GitHub Pages**
-- 仓库页 → `Settings`（右上角）→ 左侧 `Pages`。
-- `Build and deployment` → `Source` 选 **Deploy from a branch**。
-- `Branch` 选 `main`（或你推送的分支），目录选 **/ (root)**（因为我们把文件放在仓库根；若放在 `docs/` 则选 `/docs`）→ `Save`。
+### 上线步骤
+1. 上传整站到 `/var/www/zhuoyun`（含 `admin/`）。
+2. 打开 `admin/config.php`，把 `ADMIN_PASS` 改成强密码。
+3. 确保 `assets/data/content.json` 可写：`chmod 664 assets/data/content.json`（或相应目录权限）。
+4. 浏览器访问 `https://www.zhuoyunkeji.com/admin/index.php` → 输入密码登录。
+5. 在「招聘管理 / 公司动态」中点新增或编辑，填表保存，前台刷新即更新。
 
-**第 4 步｜等待发布**
-- 约 1–2 分钟后，页面顶部会出现绿色提示 `Your site is published at https://...`。
-- 浏览器打开该地址即可访问。如为"项目页"，注意地址带仓库名，例如 `https://用户名.github.io/website/`。
+### 文件清单
+- `assets/data/content.json` —— 招聘 + 动态数据（后台读写）
+- `admin/config.php` —— 密码与路径配置（**部署必改密码**）
+- `admin/index.php` —— 登录 + 管理界面
+- `admin/save.php` —— 保存接口（含登录校验与文件写锁）
 
-**第 5 步｜（可选）绑定自己的域名**
-- 在 `Pages` 设置里的 `Custom domain` 填入你的域名（如 `zhuoyunkeji.com`），按提示去域名解析商添加 `CNAME` / `A` 记录。
-- GitHub 会自动签发 HTTPS 证书，约数十分钟生效。
-
-**第 6 步｜后续更新**
-- 改完文件后，方式 A 直接重新 `Upload files`；方式 B 重新 `git add . && git commit -m "update" && git push`。
-- GitHub Pages 会自动重新构建发布（通常 < 1 分钟）。
-
----
-
-## 四、让"联系我们"表单真正收件（GitHub Pages 无后端）
-
-GitHub Pages 只能托管静态文件，**表单本身不会把数据发到你邮箱**。本站已预留 Formspree 对接：
-
-1. 打开 https://formspree.io ，免费注册并 `New form`，得到形如 `https://formspree.io/f/abcdwxyz` 的地址。
-2. 用 VS Code 打开 `contact.html`，把两处 `YOUR_FORM_ID` 替换成你真实的 ID（即把 `https://formspree.io/f/YOUR_FORM_ID` 改成 `https://formspree.io/f/abcdwxyz`）。
-3. 保存、按第三步上传。**未替换时表单走"演示成功"逻辑，不会真正发送**（页面会提示），不影响站点展示。
-4. 其他可选方案：Getform、Web3Forms，或自建 Serverless 函数（Vercel/Netlify Functions）。
-
----
-
-## 五、改成你自己的内容（5 处必改）
-
-1. **公司名 / 品牌**：全局搜索 `卓云信息` 与 `ZHUOYUN` 替换为实际名称；替换 `assets/img/logo.svg` 与 `favicon.svg`（用任意 SVG 编辑器或让 AI 生成）。
-2. **联系方式**：编辑各页 `<footer>` 与 `contact.html` 中的地址、电话 `400-XXX-XXXX`、邮箱 `contact@zhuoyunkeji.com`。
-3. **配色**：修改 `assets/css/style.css` 顶部 `:root` 的 CSS 变量（`--navy` / `--blue` / `--sky` 等）即可整体换色，无需动 HTML。
-4. **文案与案例**：直接在对应 `.html` 中改中文；案例数字为脱敏示例，请替换为真实可公开数据。
-5. **新增页面**：复制任一 `.html`，改 `<title>` 与内容，并在各页 `<nav class="nav-links">` 中补一条 `<a>` 链接。
-
----
-
-## 六、技术说明 & 常见问题
-
-- 前端栈：原生 HTML5 + CSS3 + 原生 JavaScript，**无框架、无构建步骤、无第三方依赖**，上传即用。
-- 响应式：桌面 / 平板 / 手机自适应；移动端含汉堡菜单。
-- 页面空白 / 样式丢失？多半是路径问题 —— 确保 `style.css`、`main.js`、`img` 都随 `index.html` 一起上传，且保持相对路径结构不变。
-- 想本地先预览？在 `website/` 目录执行 `python -m http.server 8080`，浏览器开 `http://localhost:8080` 即可。
-- 合规声明：示例站引用的《密码法》《商用密码管理条例》《GB/T 39786 / 43206》等均为公开标准；正式上线前请确保资质、案例、数据表述真实合规。
-
----
-
-© 云南卓云信息安全科技有限公司
+### 备注
+- 资质证书、项目公示（zw_projects.json）等由技术侧维护，不在后台范围内。
+- 若 `content.json` 损坏：删掉该文件，前端会自动回退到 `main.js` 内置静态数据，不影响浏览。

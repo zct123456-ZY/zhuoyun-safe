@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>站内搜索 | 云南卓云信息安全科技有限公司</title>
+<meta name="description" content="云南卓云信息安全科技有限公司站内搜索，快速查询密评、等保测评、密码应用方案、资质荣誉、信息公示与招聘等内容。">
+<link rel="icon" href="assets/img/favicon.svg">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="卓云安全"><span>卓云安全<small>ZHUOYUN SECURITY</small></span></a>
+    <nav class="nav-links">
+      <a href="index.html">首页</a><a href="about.html">关于我们</a><a href="services.html">服务项目</a>
+      <a href="qualifications.html">资质荣誉</a><a href="cases.html">案例客户</a><a href="disclosure.html">信息公示</a><a href="contact.html">联系我们</a>
+    </nav>
+    <div class="nav-cta">
+      <form class="nav-search" action="search.html" method="get" role="search" onsubmit="var v=this.querySelector('input[name=q]').value.trim(); if(!v) return false; location.href='search.html?q='+encodeURIComponent(v); return false;">
+        <svg class="ns-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+        <input type="search" name="q" placeholder="搜索…" aria-label="站内搜索" autocomplete="off">
+        <button type="submit" class="ns-btn" aria-label="搜索"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></button>
+      </form>
+      <a class="btn btn-outline" href="contact.html">业务咨询</a><a class="ns-icon-m" href="search.html" aria-label="搜索"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></a>
+      <button class="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero search-hero">
+  <div class="wrap">
+    <span class="hero-tag">SITE SEARCH</span>
+    <h1>全站搜索</h1>
+    <p class="lead">输入关键词，快速定位密评、等保测评、密码应用方案、资质荣誉、信息公示与招聘等内容。</p>
+    <form class="search-bar" action="search.html" method="get" role="search" onsubmit="var v=this.querySelector('input[name=q]').value.trim(); if(!v) return false; location.href='search.html?q='+encodeURIComponent(v); return false;">
+      <svg class="sb-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+      <input type="search" name="q" id="qInput" placeholder="如：密评、GB/T 39786、等保测评、密码法、政务云、某单位名称…" aria-label="站内搜索" autocomplete="off">
+      <button type="submit" class="sb-btn">搜索</button>
+    </form>
+    <div class="hot-words">
+      <span class="hw-label">热门搜索：</span>
+      <button class="hw" data-kw="密评">密评</button>
+      <button class="hw" data-kw="GB/T 39786">GB/T 39786</button>
+      <button class="hw" data-kw="等保测评">等保测评</button>
+      <button class="hw" data-kw="密码法">密码法</button>
+      <button class="hw" data-kw="商用密码">商用密码</button>
+      <button class="hw" data-kw="政务云">政务云</button>
+      <button class="hw" data-kw="金融密评">金融密评</button>
+      <button class="hw" data-kw="资质">资质</button>
+      <button class="hw" data-kw="招聘">招聘</button>
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="wrap">
+    <div class="search-result-panel reveal">
+      <div class="search-meta">
+        <span id="resultStat">请输入关键词开始搜索</span>
+        <div class="search-cats" id="searchCats">
+          <button class="sc active" data-cat="all">全部</button>
+          <button class="sc" data-cat="公示">信息公示</button>
+          <button class="sc" data-cat="服务">服务项目</button>
+          <button class="sc" data-cat="资质">资质荣誉</button>
+          <button class="sc" data-cat="案例">案例客户</button>
+          <button class="sc" data-cat="新闻">新闻公告</button>
+          <button class="sc" data-cat="招聘">人才招聘</button>
+          <button class="sc" data-cat="关于">关于我们</button>
+        </div>
+      </div>
+      <div id="searchResults" class="search-results"></div>
+      <div id="searchEmpty" class="search-empty" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+        <p>未找到与「<b id="emptyKw"></b>」相关的内容。</p>
+        <p class="tip">建议：尝试更通用的词（如「密评」「资质」「等保」），或检查输入是否有误。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div><div class="brand"><img src="assets/img/logo.svg" alt="卓云安全" style="width:40px;height:40px"><span>卓云安全<small>ZHUOYUN SECURITY</small></span></div><p class="desc">云南卓云信息安全科技有限公司——立足云南的商用密码应用安全性评估（密评）与网络安全技术服务机构，以科学、公正、准确、及时为原则，为政企客户提供合规、可信的密码安全一站式服务。</p></div>
+    <div><h5>快速链接</h5><ul><li><a href="index.html">首页</a></li><li><a href="about.html">关于我们</a></li><li><a href="services.html">服务项目</a></li><li><a href="qualifications.html">资质荣誉</a></li></ul></div>
+    <div><h5>业务领域</h5><ul><li><a href="services.html#crypto-eval">商用密码应用安全性评估</a></li><li><a href="services.html#crypto-design">密码应用方案设计与咨询</a></li><li><a href="services.html#dengbao">信息系统等保测评</a></li><li><a href="services.html#product-test">商用密码产品（模组）检测</a></li></div>
+    <div><h5>联系我们</h5><div class="contact-line" style="display:flex;gap:10px;align-items:flex-start;margin-bottom:10px"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" style="width:18px;height:18px;stroke:#8fe0d8;flex:0 0 18px;margin-top:3px"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span style="font-size:14px;color:rgba(255,255,255,.7)">昆明市五华区云时代广场2幢10层1009室</span></div><div class="contact-line" style="display:flex;gap:10px;align-items:center;margin-bottom:10px"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" style="width:18px;height:18px;stroke:#8fe0d8;flex:0 0 18px"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg><span style="font-size:14px;color:rgba(255,255,255,.7)">0871-00000000</span></div><div class="contact-line" style="display:flex;gap:10px;align-items:center"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" style="width:18px;height:18px;stroke:#8fe0d8;flex:0 0 18px"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span style="font-size:14px;color:rgba(255,255,255,.7)">contact@zhuoyunkeji.com</span></div></div>
+    <div class="footer-qr"><h5>关注我们</h5><div class="qr-duo"><div class="qr-single"><img src="assets/img/wechat-qr.png" alt="微信公众号"><span>微信公众号</span></div><div class="qr-single"><img src="assets/img/qq-group-qr.png" alt="技术交流QQ群"><span>技术交流QQ群</span></div></div></div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© 2014–2026 云南卓云信息安全科技有限公司 版权所有　<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">滇ICP备00000000号-1</a></p>
+    <p>本站部分图片及视觉素材由 AI 技术辅助生成，部分来源于网络，版权归原作者所有；如有侵权，请联系管理员删除。</p>
+  </div>
+</footer>
+
+<!-- 弹窗容器（用于详情预览） -->
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head">
+      <span class="m-tag" id="modalTag"></span>
+      <h3 id="modalTitle"></h3>
+      <button class="modal-close" id="modalClose" aria-label="关闭"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<div class="totop" aria-label="返回顶部"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/search.js" defer></script>
+</body>
+</html>

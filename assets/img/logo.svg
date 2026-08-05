@@ -1,55 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="卓云安全 logo">
   <defs>
-    <linearGradient id="zg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0D3B66"/>
-      <stop offset="100%" stop-color="#1A6BA8"/>
-    </linearGradient>
-    <linearGradient id="zg-light" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2EA5E9"/>
-      <stop offset="100%" stop-color="#1A82C4"/>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1565C0"/>
+      <stop offset="1" stop-color="#00A39B"/>
     </linearGradient>
   </defs>
-
-  <!-- 外层：云朵轮廓 + 盾形底座 融合体 -->
-  <path d="M24 4
-           C16 4 10 8 8 13
-           C5 14 3 17 3 20.5
-           C3 25 6.5 28.5 11 29
-           C11.5 35 16 40 24 40
-           C32 40 36.5 35 37 29
-           C41.5 28.5 45 25 45 20.5
-           C45 17 43 14 40 13
-           C38 8 32 4 24 4Z"
-        fill="url(#zg)"/>
-
-  <!-- 内层镂空：云朵负空间 + 密钥孔 -->
-  <path d="M24 10
-           C19 10 15 12.5 13.5 16
-           C11.5 16.5 10 18.5 10 21
-           C10 23.8 12.2 26 15 26.3
-           C15.3 30 18.5 33 24 33
-           C29.5 33 32.7 30 33 26.3
-           C35.8 26 38 23.8 38 21
-           C38 18.5 36.5 16.5 34.5 16
-           C33 12.5 29 10 24 10Z"
-        fill="url(#zg-light)" opacity=".95"/>
-
-  <!-- 中心：抽象密钥/密码符号（Z 字母变体 + 圆点 = ZHUOYUN 首字母 + 密码学） -->
-  <g transform="translate(24,21.5)">
-    <!-- 横杠上 -->
-    <rect x="-6" y="-5" width="12" height="2.2" rx="1.1" fill="#fff"/>
-    <!-- 斜杠（Z 的斜线） -->
-    <rect x="-5.5" y="-2" width="11" height="2.2" rx="1.1" fill="#fff"
-          transform="rotate(28)"/>
-    <!-- 横杠下 -->
-    <rect x="-6" y="2.8" width="12" height="2.2" rx="1.1" fill="#fff"/>
-    <!-- 密钥圆点 -->
-    <circle cx="6.5" cy="-3.8" r="2" fill="#fff"/>
+  <!-- 盾形底 -->
+  <path d="M32 4 L56 14 V30 C56 46 45 56 32 60 C19 56 8 46 8 30 V14 Z" fill="url(#g1)"/>
+  <!-- 密码波纹（密码/安全意象） -->
+  <g stroke="#9fe6df" stroke-width="2.4" stroke-linecap="round" opacity=".9">
+    <path d="M32 22 V40"/>
+    <path d="M22 27 L42 35"/>
+    <path d="M42 27 L22 35"/>
   </g>
-
-  <!-- 底部装饰：三道横线代表"数据/密码流"的稳定性 -->
-  <g opacity=".35">
-    <line x1="17" y1="42" x2="31" y2="42" stroke="#0D3B66" stroke-width="1.8" stroke-linecap="round"/>
-    <line x1="19" y1="44.5" x2="29" y2="44.5" stroke="#0D3B66" stroke-width="1.4" stroke-linecap="round"/>
-  </g>
+  <!-- 中心护点 -->
+  <circle cx="32" cy="31" r="5.5" fill="#ffffff"/>
+  <!-- 顶部 ZH 意象：两道斜杠 -->
+  <path d="M24 16 L40 16 M28 16 L28 21 M36 16 L36 21" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" fill="none"/>
 </svg>
