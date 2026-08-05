@@ -396,12 +396,12 @@
 
   /* 核心资质卡片点击：查看证书/能力说明 */
   var CERTS={
-    license:{tag:'资质证书',title:'营业执照',img:'assets/img/legacy/1.jpg',desc:'云南卓云信息安全科技有限公司营业执照，注册资本壹仟零伍拾万元整，成立于 2014 年，经营范围涵盖商用密码应用安全性评估、信息安全检测、网络安全等级保护测评、密码技术服务等。'},
-    cryptoEval:{tag:'资质证书',title:'商用密码应用安全性评估机构资质（示例）',img:'assets/img/legacy/2.jpg',desc:'公司入选商用密码应用安全性评估服务机构名录，具备依据 GB/T 39786-2021 开展信息系统密码应用安全性评估的资质（示例图，正式证书以主管部门核发为准）。'},
-    cryptoProduct:{tag:'资质证书',title:'商用密码检测机构资质（示例）',img:'assets/img/legacy/3.jpg',desc:'公司具备商用密码产品与密码应用系统检测能力，可开展密码产品功能性、安全性与合规性检测（示例图，正式证书以主管部门核发为准）。'},
-    dengbao:{tag:'资质证书',title:'信息安全等级保护测评机构推荐证书（示例）',img:'assets/img/legacy/4.jpg',desc:'公司具备信息系统安全等级保护测评能力，可开展等保定级、测评与整改咨询（示例图，正式证书以主管部门核发为准）。'},
-    cnas:{tag:'能力证书',title:'CNAS 实验室认可证书（示例）',img:'assets/img/legacy/5.jpg',desc:'公司检测实验室通过 CNAS 认可，技术能力与国际接轨，检测数据更具公信力（示例图，正式证书以 CNAS 核发为准）。'},
-    cma:{tag:'资质证书',title:'检验检测机构资质认定证书（CMA，示例）',img:'assets/img/legacy/6.jpg',desc:'公司通过检验检测机构资质认定（CMA），具备向社会出具具有证明作用的数据和结果的法定资格（示例图，正式证书以主管部门核发为准）。'}
+    license:{tag:'资质证书',title:'营业执照',img:'assets/img/cert1.jpg',desc:'云南卓云信息安全科技有限公司营业执照，注册资本壹仟零伍拾万元整，成立于 2014 年，经营范围涵盖商用密码应用安全性评估、信息安全检测、网络安全等级保护测评、密码技术服务等。'},
+    cryptoEval:{tag:'资质证书',title:'商用密码应用安全性评估机构资质（示例）',img:'assets/img/cert2.jpg',desc:'公司入选商用密码应用安全性评估服务机构名录，具备依据 GB/T 39786-2021 开展信息系统密码应用安全性评估的资质（示例图，正式证书以主管部门核发为准）。'},
+    cryptoProduct:{tag:'资质证书',title:'商用密码检测机构资质（示例）',img:'assets/img/cert3.jpg',desc:'公司具备商用密码产品与密码应用系统检测能力，可开展密码产品功能性、安全性与合规性检测（示例图，正式证书以主管部门核发为准）。'},
+    dengbao:{tag:'资质证书',title:'信息安全等级保护测评机构推荐证书（示例）',img:'assets/img/cert4.jpg',desc:'公司具备信息系统安全等级保护测评能力，可开展等保定级、测评与整改咨询（示例图，正式证书以主管部门核发为准）。'},
+    cnas:{tag:'能力证书',title:'CNAS 实验室认可证书（示例）',img:'assets/img/cert5.jpg',desc:'公司检测实验室通过 CNAS 认可，技术能力与国际接轨，检测数据更具公信力（示例图，正式证书以 CNAS 核发为准）。'},
+    cma:{tag:'资质证书',title:'检验检测机构资质认定证书（CMA，示例）',img:'assets/img/cert6.jpg',desc:'公司通过检验检测机构资质认定（CMA），具备向社会出具具有证明作用的数据和结果的法定资格（示例图，正式证书以主管部门核发为准）。'}
   };
   function certHtml(c){
     return '<div class="cert-modal-img"><img src="'+c.img+'" alt="'+c.title+'" loading="lazy"></div>'

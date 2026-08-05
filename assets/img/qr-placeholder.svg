@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="公众号二维码占位">
   <rect width="100" height="100" rx="6" fill="#fff"/>
-  <g fill="#0A2E4D">
-    <rect x="8" y="8" width="22" height="22" rx="3"/><rect x="13" y="13" width="12" height="12" rx="2" fill="#fff"/><rect x="16" y="16" width="6" height="6" fill="#0A2E4D"/>
-    <rect x="70" y="8" width="22" height="22" rx="3"/><rect x="75" y="13" width="12" height="12" rx="2" fill="#fff"/><rect x="78" y="16" width="6" height="6" fill="#0A2E4D"/>
-    <rect x="8" y="70" width="22" height="22" rx="3"/><rect x="13" y="75" width="12" height="12" rx="2" fill="#fff"/><rect x="16" y="78" width="6" height="6" fill="#0A2E4D"/>
+  <g fill="#0F3B3A">
+    <rect x="8" y="8" width="22" height="22" rx="3"/><rect x="13" y="13" width="12" height="12" rx="2" fill="#fff"/><rect x="16" y="16" width="6" height="6" fill="#0F3B3A"/>
+    <rect x="70" y="8" width="22" height="22" rx="3"/><rect x="75" y="13" width="12" height="12" rx="2" fill="#fff"/><rect x="78" y="16" width="6" height="6" fill="#0F3B3A"/>
+    <rect x="8" y="70" width="22" height="22" rx="3"/><rect x="13" y="75" width="12" height="12" rx="2" fill="#fff"/><rect x="16" y="78" width="6" height="6" fill="#0F3B3A"/>
   </g>
-  <g fill="#1565C0">
+  <g fill="#2C7A74">
     <rect x="38" y="10" width="6" height="6"/><rect x="48" y="10" width="6" height="6"/><rect x="58" y="16" width="6" height="6"/>
     <rect x="38" y="22" width="6" height="6"/><rect x="52" y="26" width="6" height="6"/><rect x="62" y="30" width="6" height="6"/>
     <rect x="10" y="38" width="6" height="6"/><rect x="22" y="44" width="6" height="6"/><rect x="34" y="38" width="6" height="6"/>
@@ -16,5 +16,5 @@
     <rect x="84" y="70" width="6" height="6"/><rect x="44" y="84" width="6" height="6"/><rect x="58" y="84" width="6" height="6"/>
     <rect x="70" y="84" width="6" height="6"/><rect x="82" y="84" width="6" height="6"/>
   </g>
-  <text x="50" y="95" text-anchor="middle" font-size="8" fill="#00A39B" font-family="sans-serif">卓云安全</text>
+  <text x="50" y="95" text-anchor="middle" font-size="8" fill="#2C7A74" font-family="sans-serif">卓云安全</text>
 </svg>

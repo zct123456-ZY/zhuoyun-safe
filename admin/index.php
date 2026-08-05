@@ -37,35 +37,35 @@ if ($loggedIn && is_file(CONTENT_FILE)) {
   * { box-sizing: border-box; }
   body { margin: 0; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
     background: #f4f7f9; color: #1f2d3a; font-size: 14px; }
-  .top { background: #0d2b45; color: #fff; padding: 14px 22px; display: flex;
+  .top { background: #0F3B3A; color: #fff; padding: 14px 22px; display: flex;
     justify-content: space-between; align-items: center; }
-  .top a { color: #9fe3d8; text-decoration: none; }
+  .top a { color: #B8C4CC; text-decoration: none; }
   main { max-width: 960px; margin: 22px auto; padding: 0 16px; }
   .sec-head { display: flex; justify-content: space-between; align-items: center; margin: 22px 0 10px; }
-  .sec-head h2 { margin: 0; font-size: 17px; color: #0d2b45; }
+  .sec-head h2 { margin: 0; font-size: 17px; color: #0F3B3A; }
   .list { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden;
     box-shadow: 0 1px 3px rgba(13,43,69,.06); }
   .list th, .list td { border-bottom: 1px solid #eef2f5; padding: 10px 12px; text-align: left; vertical-align: top; }
-  .list th { background: #eef5f4; color: #0a6b61; font-weight: 600; font-size: 13px; }
-  .list td.title { font-weight: 600; color: #0d2b45; max-width: 360px; }
-  .list .op a { margin-right: 10px; color: #1aa89a; cursor: pointer; text-decoration: none; }
+  .list th { background: #E4EDEC; color: #1F5A55; font-weight: 600; font-size: 13px; }
+  .list td.title { font-weight: 600; color: #0F3B3A; max-width: 360px; }
+  .list .op a { margin-right: 10px; color: #3E8C84; cursor: pointer; text-decoration: none; }
   .list .op a.del { color: #c0392b; }
   .btn { border: none; border-radius: 8px; padding: 8px 16px; cursor: pointer; font-size: 14px; }
-  .btn.add { background: #0e8c7f; color: #fff; }
-  .btn.save { background: #0e8c7f; color: #fff; }
+  .btn.add { background: #2C7A74; color: #fff; }
+  .btn.save { background: #2C7A74; color: #fff; }
   .btn.cancel { background: #e2e8ed; color: #465; }
   /* 登录 */
   .login { max-width: 340px; margin: 12vh auto; background: #fff; padding: 28px; border-radius: 14px;
     box-shadow: 0 4px 20px rgba(13,43,69,.1); text-align: center; }
-  .login h1 { font-size: 19px; color: #0d2b45; margin: 0 0 16px; }
+  .login h1 { font-size: 19px; color: #0F3B3A; margin: 0 0 16px; }
   .login input { width: 100%; padding: 11px 12px; border: 1px solid #d6dee4; border-radius: 8px; margin-bottom: 12px; font-size: 15px; }
-  .login .btn { width: 100%; background: #0e8c7f; color: #fff; }
+  .login .btn { width: 100%; background: #2C7A74; color: #fff; }
   .err { color: #c0392b; margin: 0 0 10px; }
   /* 编辑抽屉 */
   .editor { position: fixed; top: 0; right: 0; width: 420px; max-width: 92vw; height: 100%; background: #fff;
     box-shadow: -4px 0 20px rgba(0,0,0,.12); padding: 20px; overflow-y: auto; display: none; }
   .editor.show { display: block; }
-  .editor h3 { margin: 0 0 14px; color: #0d2b45; }
+  .editor h3 { margin: 0 0 14px; color: #0F3B3A; }
   .editor label { display: block; font-size: 12.5px; color: #556; margin: 10px 0 4px; }
   .editor input, .editor textarea { width: 100%; padding: 9px 10px; border: 1px solid #d6dee4; border-radius: 7px;
     font-size: 13.5px; font-family: inherit; }
